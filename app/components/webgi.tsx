@@ -18,10 +18,10 @@ gsap.registerPlugin(ScrollTrigger);
 const WebgiPage = () => {
   useEffect(() => {
     const lenis = new Lenis({
-      duration: 10,
-      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+      duration: 1.2,
+      easing: (t) => 1 - Math.pow(1 - t, 3),
       smoothWheel: true,
-      touchMultiplier: 2,
+      touchMultiplier: 1.5,
       infinite: false,
     });
 
@@ -50,7 +50,7 @@ const WebgiPage = () => {
       const customizerInterface = document.querySelector('.customizer--container') as HTMLElement;
 
       await viewer.addPlugin(GBufferPlugin);
-      await viewer.addPlugin(new ProgressivePlugin(32));
+      await viewer.addPlugin(new ProgressivePlugin(1));
       const tonemapPlugin = new TonemapPlugin(true);
       await viewer.addPlugin(tonemapPlugin);
       await viewer.addPlugin(GammaCorrectionPlugin);
@@ -67,7 +67,7 @@ const WebgiPage = () => {
 
       importer.addEventListener("onLoad", () => {
         gsap.to('.loader', {
-          x: '100%', duration: 0.8, ease: 'power4.inOut', delay: 1, onComplete: () => {
+          x: '100%', duration: 0, ease: 'power4.inOut', delay: 0, onComplete: () => {
             document.body.style.overflowY = 'auto';
             lenis.start();
           }
@@ -93,7 +93,7 @@ const WebgiPage = () => {
 
       onUpdate();
 
-      window.scrollTo(0, 0);
+      window.scrollTo(0, 5);
 
       
 

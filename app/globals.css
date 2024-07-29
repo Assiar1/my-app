@@ -190,7 +190,7 @@ body {
   top: 0;
   left: 0;
   height: 100%;
-  background-color: #F2AA7E; /* Adjust color as needed */
+  background-color: #3d0093; /* Adjust color as needed */
   width: 0; /* This will be animated */
   animation: progress-bar 2s linear infinite;
 }
@@ -248,7 +248,8 @@ margin-bottom: 35px;
 }
 
 .button--hero{
-  background: #F2AA7E;
+
+  background: #ffac6d;
   color: black;
   border: none;
   font-weight: 600;
@@ -262,7 +263,7 @@ margin-bottom: 35px;
 }
 
 .button--customize{
-  background: #F2AA7E;
+  background: #3d0093;
   color: black;
   border: none;
   font-weight: 600;
@@ -320,7 +321,7 @@ h2{
 .custom--bg{
   width: 100%;
   height: 800px;
-  background: #F2AA7E;
+  background: #FACFAD;
   -webkit-transform: skew(20deg);
   -moz-transform: skew(20deg);
   -o-transform: skew(20deg);
@@ -353,6 +354,11 @@ footer{
   color: white;
 }
 
+
+.interactive-element {
+  position: relative;
+  z-index: 2; /* Make sure this is higher than the canvas */
+}
 #webgi-canvas {
   width: 100vw;
   height: 100vh;
@@ -410,7 +416,7 @@ footer{
 }
 
 .yellow{
-  background-color: #F2AA7E;
+  background-color: #3d0093;
 }
 
 .red{
